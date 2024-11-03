@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Zencord",
+  "version": "1.0",
+  "author": "femmeromantic",
+
+  "description": "Adds a 'zen mode' to Discord when you press F2",
+
+  "icons": {
+    "48": "icons/zen-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.discord.com/*"],
+      "js": ["zenmode.js"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "zencord-firefox@awruff.github.io",
+      "strict_min_version": "128.0"
+    }
+  }
+}
